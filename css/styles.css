@@ -1,0 +1,137 @@
+/* GrowLight Calculator - Custom Styles */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Form input focus states */
+input:focus, select:focus {
+    outline: none;
+}
+
+/* Results animation */
+#results {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Product cards hover effect */
+#recommendedProducts > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#recommendedProducts > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+button, a.bg-primary, a.bg-white {
+    transition: all 0.2s ease;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 768px) {
+    nav .space-x-6 {
+        display: none;
+    }
+}
+
+/* Table styling */
+table {
+    width: 100%;
+}
+
+table th {
+    font-weight: 600;
+    text-align: left;
+}
+
+table td, table th {
+    padding: 0.75rem 0.5rem;
+}
+
+/* FAQ accordion styling */
+.bg-white.p-6.rounded-xl {
+    transition: transform 0.2s ease;
+}
+
+.bg-white.p-6.rounded-xl:hover {
+    transform: translateY(-1px);
+}
+
+/* Calculator card */
+#calculator .bg-white {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Result cards */
+.bg-green-50, .bg-blue-50, .bg-amber-50, .bg-purple-50 {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Top pick badge pulse */
+.border-primary.border-2 {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+    }
+}
+
+/* Feature tags */
+.text-xs.bg-gray-100 {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Footer links hover */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Print styles */
+@media print {
+    header, footer, .bg-primary.text-white.py-16, #productRecommendations a {
+        display: none;
+    }
+
+    #results {
+        display: block !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-600 {
+        color: #374151;
+    }
+
+    .border-gray-200 {
+        border-color: #9ca3af;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

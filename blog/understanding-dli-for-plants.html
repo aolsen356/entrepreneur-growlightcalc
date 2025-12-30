@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding DLI: Daily Light Integral Guide for Indoor Plants</title>
+    <meta name="description" content="Complete guide to DLI (Daily Light Integral) for indoor growing. Learn optimal DLI targets for vegetables, cannabis, herbs, and houseplants with calculation examples.">
+    <meta name="keywords" content="DLI calculator, daily light integral, grow light DLI, plant light requirements, PPFD to DLI, indoor plant lighting">
+    <link rel="canonical" href="https://growlightcalc.pages.dev/blog/understanding-dli-for-plants.html">
+
+    <meta property="og:title" content="Understanding DLI: Daily Light Integral Guide">
+    <meta property="og:description" content="Master DLI calculations for optimal indoor plant growth. Includes DLI charts for all plant types.">
+    <meta property="og:type" content="article">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16A34A',
+                        secondary: '#4F46E5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary">GrowLight Calc</a>
+            <div class="space-x-6">
+                <a href="/#calculator" class="text-gray-600 hover:text-primary">Calculator</a>
+                <a href="/blog/" class="text-gray-600 hover:text-primary">Guides</a>
+                <a href="/" class="text-gray-600 hover:text-primary">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article -->
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <nav class="text-sm text-gray-500 mb-6">
+            <a href="/" class="hover:text-primary">Home</a> &gt;
+            <a href="/blog/" class="hover:text-primary">Blog</a> &gt;
+            <span>Understanding DLI</span>
+        </nav>
+
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Understanding DLI: The Complete Guide to Daily Light Integral</h1>
+            <div class="flex items-center text-gray-500 text-sm">
+                <span>Updated: December 2025</span>
+                <span class="mx-2">|</span>
+                <span>12 min read</span>
+            </div>
+        </header>
+
+        <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-600 mb-8">
+                DLI (Daily Light Integral) is the most accurate way to measure whether your plants are getting enough light. Unlike simple lux or PPFD readings, DLI accounts for both intensity AND duration - giving you a complete picture of your plant's daily light diet.
+            </p>
+
+            <div class="bg-blue-50 p-6 rounded-xl mb-8">
+                <h2 class="text-xl font-semibold text-gray-900 mb-3">What is DLI?</h2>
+                <p class="text-gray-700 mb-4">
+                    DLI measures the total number of photosynthetically active photons (light particles plants can use) delivered to one square meter over a 24-hour period. It's expressed in <strong>mol/m2/d</strong> (moles per square meter per day).
+                </p>
+                <p class="text-gray-700">
+                    Think of it like calories for plants - PPFD is how fast you're feeding them, DLI is the total amount they eat per day.
+                </p>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Why DLI Matters More Than PPFD Alone</h2>
+
+            <p class="text-gray-700 mb-4">
+                Many growers focus only on PPFD (light intensity), but this misses half the picture. Consider two scenarios:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-gray-900 mb-3">Scenario A</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>PPFD: 800 umol/m2/s</li>
+                        <li>Hours: 12</li>
+                        <li><strong>DLI: 34.6 mol/m2/d</strong></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-gray-900 mb-3">Scenario B</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>PPFD: 500 umol/m2/s</li>
+                        <li>Hours: 18</li>
+                        <li><strong>DLI: 32.4 mol/m2/d</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                Both scenarios deliver similar total light despite very different intensities. Scenario B uses 37% less intense light but runs longer - potentially better for heat-sensitive plants or energy savings.
+            </p>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">How to Calculate DLI</h2>
+
+            <p class="text-gray-700 mb-4">
+                The DLI formula converts PPFD (instant intensity) to daily totals:
+            </p>
+
+            <div class="bg-gray-100 p-6 rounded-xl mb-6 font-mono text-center">
+                <p class="text-lg">DLI = PPFD x Hours x 0.0036</p>
+                <p class="text-sm text-gray-600 mt-2">or: DLI = PPFD x (Hours x 3600) / 1,000,000</p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">DLI Calculation Examples</h3>
+
+            <div class="space-y-4 mb-8">
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <p class="font-medium text-gray-900">Example 1: Cannabis in Flowering</p>
+                    <p class="text-gray-700">PPFD 1000 umol/m2/s x 12 hours x 0.0036 = <strong>43.2 mol/m2/d</strong></p>
+                </div>
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <p class="font-medium text-gray-900">Example 2: Lettuce in Hydroponics</p>
+                    <p class="text-gray-700">PPFD 250 umol/m2/s x 16 hours x 0.0036 = <strong>14.4 mol/m2/d</strong></p>
+                </div>
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <p class="font-medium text-gray-900">Example 3: Seedlings</p>
+                    <p class="text-gray-700">PPFD 200 umol/m2/s x 18 hours x 0.0036 = <strong>13.0 mol/m2/d</strong></p>
+                </div>
+            </div>
+
+            <div class="bg-primary text-white p-6 rounded-xl mb-8 text-center">
+                <h3 class="text-xl font-bold mb-3">Skip the Math</h3>
+                <p class="mb-4 opacity-90">Our free calculator does all DLI calculations automatically based on your plant type and setup.</p>
+                <a href="/#calculator" class="inline-block bg-white text-primary px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">Calculate DLI</a>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Optimal DLI by Plant Type</h2>
+
+            <p class="text-gray-700 mb-4">
+                Different plants have vastly different light requirements. Here's a comprehensive DLI chart based on horticultural research:
+            </p>
+
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-4 py-3 text-left">Plant Type</th>
+                            <th class="border border-gray-300 px-4 py-3 text-left">Minimum DLI</th>
+                            <th class="border border-gray-300 px-4 py-3 text-left">Optimal DLI</th>
+                            <th class="border border-gray-300 px-4 py-3 text-left">Maximum DLI</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Lettuce & Leafy Greens</td>
+                            <td class="border border-gray-300 px-4 py-3">10-12</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">14-17</td>
+                            <td class="border border-gray-300 px-4 py-3">20-22</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Herbs (Basil, Cilantro)</td>
+                            <td class="border border-gray-300 px-4 py-3">12-14</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">15-20</td>
+                            <td class="border border-gray-300 px-4 py-3">25</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Tomatoes (Vegetative)</td>
+                            <td class="border border-gray-300 px-4 py-3">15-18</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">20-25</td>
+                            <td class="border border-gray-300 px-4 py-3">30</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Tomatoes (Fruiting)</td>
+                            <td class="border border-gray-300 px-4 py-3">20-25</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">30-35</td>
+                            <td class="border border-gray-300 px-4 py-3">40</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Peppers</td>
+                            <td class="border border-gray-300 px-4 py-3">18-22</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">25-30</td>
+                            <td class="border border-gray-300 px-4 py-3">38</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Cucumbers</td>
+                            <td class="border border-gray-300 px-4 py-3">15-18</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">20-30</td>
+                            <td class="border border-gray-300 px-4 py-3">35</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Cannabis (Vegetative)</td>
+                            <td class="border border-gray-300 px-4 py-3">20-25</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">35-45</td>
+                            <td class="border border-gray-300 px-4 py-3">55</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Cannabis (Flowering)</td>
+                            <td class="border border-gray-300 px-4 py-3">35-40</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">45-65</td>
+                            <td class="border border-gray-300 px-4 py-3">75</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Seedlings & Clones</td>
+                            <td class="border border-gray-300 px-4 py-3">6-8</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">10-15</td>
+                            <td class="border border-gray-300 px-4 py-3">18</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Houseplants (Low Light)</td>
+                            <td class="border border-gray-300 px-4 py-3">2-4</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">4-8</td>
+                            <td class="border border-gray-300 px-4 py-3">12</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Houseplants (Medium Light)</td>
+                            <td class="border border-gray-300 px-4 py-3">4-6</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">8-12</td>
+                            <td class="border border-gray-300 px-4 py-3">15</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Succulents & Cacti</td>
+                            <td class="border border-gray-300 px-4 py-3">8-12</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">15-25</td>
+                            <td class="border border-gray-300 px-4 py-3">35</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Orchids</td>
+                            <td class="border border-gray-300 px-4 py-3">6-10</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">12-18</td>
+                            <td class="border border-gray-300 px-4 py-3">22</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-4 py-3 font-medium">Strawberries</td>
+                            <td class="border border-gray-300 px-4 py-3">15-18</td>
+                            <td class="border border-gray-300 px-4 py-3 text-primary font-bold">22-30</td>
+                            <td class="border border-gray-300 px-4 py-3">35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">What Happens With Too Little DLI?</h2>
+
+            <p class="text-gray-700 mb-4">
+                Insufficient DLI causes a range of growth problems:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li><strong>Stretching (etiolation)</strong> - Stems elongate searching for light, becoming weak</li>
+                <li><strong>Pale leaves</strong> - Reduced chlorophyll production</li>
+                <li><strong>Poor flowering/fruiting</strong> - Plants prioritize survival over reproduction</li>
+                <li><strong>Slow growth</strong> - Limited photosynthesis means limited energy</li>
+                <li><strong>Leggy seedlings</strong> - The classic sign of insufficient light during early growth</li>
+                <li><strong>Leaf drop</strong> - Plants shed leaves they can't support</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">What Happens With Too Much DLI?</h2>
+
+            <p class="text-gray-700 mb-4">
+                Excessive light can be just as damaging as too little:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li><strong>Light burn</strong> - Bleached, white, or brown patches on leaves</li>
+                <li><strong>Leaf curling</strong> - Leaves curl up or "taco" to reduce light exposure</li>
+                <li><strong>Nutrient lockout</strong> - High light accelerates metabolism faster than roots can supply nutrients</li>
+                <li><strong>Foxtailing (cannabis)</strong> - Abnormal bud structure from light stress</li>
+                <li><strong>Tip burn</strong> - Brown, crispy leaf tips</li>
+                <li><strong>Reduced terpenes</strong> - Some compounds degrade under excessive light</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">PPFD to DLI Quick Reference Chart</h2>
+
+            <p class="text-gray-700 mb-4">
+                Use this chart to quickly estimate DLI based on your PPFD reading and photoperiod:
+            </p>
+
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-3 py-2">PPFD</th>
+                            <th class="border border-gray-300 px-3 py-2">12 hrs</th>
+                            <th class="border border-gray-300 px-3 py-2">14 hrs</th>
+                            <th class="border border-gray-300 px-3 py-2">16 hrs</th>
+                            <th class="border border-gray-300 px-3 py-2">18 hrs</th>
+                            <th class="border border-gray-300 px-3 py-2">20 hrs</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr>
+                            <td class="border border-gray-300 px-3 py-2 font-medium">200</td>
+                            <td class="border border-gray-300 px-3 py-2">8.6</td>
+                            <td class="border border-gray-300 px-3 py-2">10.1</td>
+                            <td class="border border-gray-300 px-3 py-2">11.5</td>
+                            <td class="border border-gray-300 px-3 py-2">13.0</td>
+                            <td class="border border-gray-300 px-3 py-2">14.4</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 font-medium">300</td>
+                            <td class="border border-gray-300 px-3 py-2">13.0</td>
+                            <td class="border border-gray-300 px-3 py-2">15.1</td>
+                            <td class="border border-gray-300 px-3 py-2">17.3</td>
+                            <td class="border border-gray-300 px-3 py-2">19.4</td>
+                            <td class="border border-gray-300 px-3 py-2">21.6</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-3 py-2 font-medium">400</td>
+                            <td class="border border-gray-300 px-3 py-2">17.3</td>
+                            <td class="border border-gray-300 px-3 py-2">20.2</td>
+                            <td class="border border-gray-300 px-3 py-2">23.0</td>
+                            <td class="border border-gray-300 px-3 py-2">25.9</td>
+                            <td class="border border-gray-300 px-3 py-2">28.8</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 font-medium">500</td>
+                            <td class="border border-gray-300 px-3 py-2">21.6</td>
+                            <td class="border border-gray-300 px-3 py-2">25.2</td>
+                            <td class="border border-gray-300 px-3 py-2">28.8</td>
+                            <td class="border border-gray-300 px-3 py-2">32.4</td>
+                            <td class="border border-gray-300 px-3 py-2">36.0</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-3 py-2 font-medium">600</td>
+                            <td class="border border-gray-300 px-3 py-2">25.9</td>
+                            <td class="border border-gray-300 px-3 py-2">30.2</td>
+                            <td class="border border-gray-300 px-3 py-2">34.6</td>
+                            <td class="border border-gray-300 px-3 py-2">38.9</td>
+                            <td class="border border-gray-300 px-3 py-2">43.2</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 font-medium">800</td>
+                            <td class="border border-gray-300 px-3 py-2">34.6</td>
+                            <td class="border border-gray-300 px-3 py-2">40.3</td>
+                            <td class="border border-gray-300 px-3 py-2">46.1</td>
+                            <td class="border border-gray-300 px-3 py-2">51.8</td>
+                            <td class="border border-gray-300 px-3 py-2">57.6</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-3 py-2 font-medium">1000</td>
+                            <td class="border border-gray-300 px-3 py-2">43.2</td>
+                            <td class="border border-gray-300 px-3 py-2">50.4</td>
+                            <td class="border border-gray-300 px-3 py-2">57.6</td>
+                            <td class="border border-gray-300 px-3 py-2">64.8</td>
+                            <td class="border border-gray-300 px-3 py-2">72.0</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 px-3 py-2 font-medium">1200</td>
+                            <td class="border border-gray-300 px-3 py-2">51.8</td>
+                            <td class="border border-gray-300 px-3 py-2">60.5</td>
+                            <td class="border border-gray-300 px-3 py-2">69.1</td>
+                            <td class="border border-gray-300 px-3 py-2">77.8</td>
+                            <td class="border border-gray-300 px-3 py-2">86.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">How to Measure DLI</h2>
+
+            <p class="text-gray-700 mb-4">
+                Accurate DLI measurement requires knowing your PPFD at canopy level. Options include:
+            </p>
+
+            <div class="space-y-4 mb-8">
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">Professional PAR Meters ($300-500)</h3>
+                    <p class="text-gray-700">Apogee MQ-500 or similar. Most accurate but expensive. Worth it for commercial operations.</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">Smartphone Apps ($5-30)</h3>
+                    <p class="text-gray-700">Photone app (iOS/Android) uses your phone's camera. Within 10-15% accuracy for most LED lights. Great for hobbyists.</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-900 mb-2">Manufacturer Specifications</h3>
+                    <p class="text-gray-700">Quality light manufacturers provide PPFD maps showing intensity at different heights. Use these as starting estimates.</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Optimizing DLI: Practical Tips</h2>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">1. Adjust Height, Not Just Schedule</h3>
+            <p class="text-gray-700 mb-4">
+                Moving lights closer increases PPFD (and DLI) without extending photoperiod. This is useful when plants need more light but you want to maintain a 12/12 flowering schedule.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">2. Match DLI to Growth Stage</h3>
+            <p class="text-gray-700 mb-4">
+                Start seedlings at low DLI (10-12) and gradually increase as they mature. A 4-week old vegetative plant can handle twice the DLI of a 1-week old seedling.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">3. Account for Canopy Variation</h3>
+            <p class="text-gray-700 mb-4">
+                PPFD varies across your grow space - highest directly under the light, lower at edges. Aim to keep all areas above minimum DLI. LST (low-stress training) and SCROG techniques help create even canopies.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">4. Consider CO2 Enhancement</h3>
+            <p class="text-gray-700 mb-4">
+                With supplemental CO2 (1000-1500 ppm), plants can utilize higher DLI - up to 65-75 mol/m2/d for cannabis. Without extra CO2, maxing out around 40-50 mol/m2/d is more efficient.
+            </p>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">DLI and Light Schedule Optimization</h2>
+
+            <p class="text-gray-700 mb-4">
+                Different lighting schedules can achieve similar DLI with different tradeoffs:
+            </p>
+
+            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                <h3 class="font-semibold text-gray-900 mb-4">Achieving 40 mol/m2/d DLI - Three Ways</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                        <span>High Intensity, Short Day</span>
+                        <span class="font-mono">925 PPFD x 12h</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                        <span>Medium Intensity, Medium Day</span>
+                        <span class="font-mono">695 PPFD x 16h</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Lower Intensity, Long Day</span>
+                        <span class="font-mono">617 PPFD x 18h</span>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-4">Each achieves ~40 mol/m2/d but with different heat output and energy use profiles.</p>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Key Takeaways</h2>
+
+            <ul class="list-disc pl-6 mb-8 text-gray-700 space-y-2">
+                <li>DLI = total daily light dose, accounting for both intensity and duration</li>
+                <li>Different plants have vastly different DLI requirements (4-65+ mol/m2/d)</li>
+                <li>Both too little and too much DLI cause growth problems</li>
+                <li>Use PPFD x Hours x 0.0036 to calculate DLI</li>
+                <li>Adjust light height or schedule to hit your target DLI</li>
+                <li>Phone apps like Photone provide good DLI estimates for hobbyists</li>
+            </ul>
+
+            <div class="bg-primary text-white p-8 rounded-xl text-center">
+                <h3 class="text-2xl font-bold mb-4">Get Your DLI Target Instantly</h3>
+                <p class="mb-6 opacity-90">Our calculator determines optimal DLI for your specific plants and calculates the wattage needed to achieve it.</p>
+                <a href="/#calculator" class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Calculate Now</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="max-w-4xl mx-auto px-4 py-12 border-t border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Guides</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <a href="/blog/led-vs-hps-grow-lights.html" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                <h3 class="font-semibold text-gray-900 mb-2">LED vs HPS Grow Lights</h3>
+                <p class="text-gray-600 text-sm">Complete comparison of the two major grow light technologies.</p>
+            </a>
+            <a href="/blog/best-grow-lights-4x4-tent.html" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                <h3 class="font-semibold text-gray-900 mb-2">Best Grow Lights for 4x4 Tents</h3>
+                <p class="text-gray-600 text-sm">Top recommendations for the most popular tent size.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 GrowLight Calc. All rights reserved.</p>
+            <p class="text-sm mt-2">Affiliate Disclosure: We may earn commissions from products recommended on this site.</p>
+        </div>
+    </footer>
+</body>
+</html>

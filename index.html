@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Light Calculator - Free DLI, Coverage & Cost Calculator for Indoor Plants</title>
+    <meta name="description" content="Free grow light calculator. Calculate optimal DLI, coverage area, wattage requirements, and electricity costs for your indoor garden, hydroponics, or grow room.">
+    <meta name="keywords" content="grow light calculator, DLI calculator, LED grow light coverage, grow light wattage, indoor plant lighting, hydroponics lighting">
+    <link rel="canonical" href="https://growlightcalc.pages.dev/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Grow Light Calculator - Free DLI & Coverage Calculator">
+    <meta property="og:description" content="Calculate optimal grow light requirements for your indoor plants. DLI, coverage, wattage, and cost estimates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growlightcalc.pages.dev/">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#16A34A',
+                        secondary: '#4F46E5',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary">GrowLight Calc</a>
+            <div class="space-x-6">
+                <a href="#calculator" class="text-gray-600 hover:text-primary">Calculator</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-primary">How It Works</a>
+                <a href="#recommendations" class="text-gray-600 hover:text-primary">Lights</a>
+                <a href="blog/" class="text-gray-600 hover:text-primary">Guides</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 py-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Free Grow Light Calculator
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Calculate the perfect lighting for your indoor garden. Get DLI recommendations, coverage estimates, and find the right grow light for your plants.
+        </p>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="max-w-4xl mx-auto px-4 py-8" id="calculator">
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Grow Light Requirements Calculator</h2>
+
+            <form id="growLightForm" class="space-y-6">
+                <!-- Plant Type -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">What are you growing?</label>
+                    <select id="plantType" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        <option value="leafy">Leafy Greens (Lettuce, Spinach, Herbs)</option>
+                        <option value="fruiting">Fruiting Plants (Tomatoes, Peppers, Cucumbers)</option>
+                        <option value="flowering">Flowering Plants (Cannabis, Orchids)</option>
+                        <option value="seedlings">Seedlings & Clones</option>
+                        <option value="houseplants">Houseplants (Low-Medium Light)</option>
+                        <option value="succulents">Succulents & Cacti</option>
+                    </select>
+                </div>
+
+                <!-- Growth Stage -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Growth Stage</label>
+                    <select id="growthStage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        <option value="seedling">Seedling/Clone</option>
+                        <option value="vegetative">Vegetative Growth</option>
+                        <option value="flowering">Flowering/Fruiting</option>
+                    </select>
+                </div>
+
+                <!-- Grow Space Dimensions -->
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Length (ft)</label>
+                        <input type="number" id="length" value="4" min="1" max="20" step="0.5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Width (ft)</label>
+                        <input type="number" id="width" value="4" min="1" max="20" step="0.5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Height (ft)</label>
+                        <input type="number" id="height" value="6" min="3" max="12" step="0.5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                </div>
+
+                <!-- Light Type -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Light Type</label>
+                    <select id="lightType" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        <option value="led">LED (Most Efficient)</option>
+                        <option value="hps">HPS (High Intensity)</option>
+                        <option value="fluorescent">Fluorescent/T5 (Budget)</option>
+                        <option value="cmh">CMH/LEC (Balanced)</option>
+                    </select>
+                </div>
+
+                <!-- Electricity Cost -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Electricity Cost ($/kWh)</label>
+                    <input type="number" id="electricityCost" value="0.12" min="0.01" max="1" step="0.01" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    <p class="text-sm text-gray-500 mt-1">US average: $0.12/kWh. Check your utility bill for your rate.</p>
+                </div>
+
+                <!-- Hours Per Day -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Light Hours Per Day</label>
+                    <select id="hoursPerDay" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        <option value="18">18 hours (Vegetative)</option>
+                        <option value="12">12 hours (Flowering)</option>
+                        <option value="16">16 hours (General Growing)</option>
+                        <option value="14">14 hours (Transitional)</option>
+                        <option value="24">24 hours (Seedlings/Clones)</option>
+                    </select>
+                </div>
+
+                <!-- Calculate Button -->
+                <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition">
+                    Calculate My Requirements
+                </button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="results" class="hidden mt-8 pt-8 border-t border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Your Grow Light Requirements</h3>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- Coverage & Wattage -->
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-gray-700 mb-4">Space & Power</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Grow Area:</span>
+                                <span class="font-bold text-gray-900" id="resultArea">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Recommended Wattage:</span>
+                                <span class="font-bold text-primary" id="resultWattage">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Watts per sq ft:</span>
+                                <span class="font-bold text-gray-900" id="resultWpSqFt">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DLI Information -->
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-gray-700 mb-4">Light Intensity (DLI)</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Target DLI:</span>
+                                <span class="font-bold text-secondary" id="resultDLI">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Target PPFD:</span>
+                                <span class="font-bold text-gray-900" id="resultPPFD">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">DLI Range:</span>
+                                <span class="font-bold text-gray-900" id="resultDLIRange">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cost Estimate -->
+                    <div class="bg-amber-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-gray-700 mb-4">Running Costs</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Daily Cost:</span>
+                                <span class="font-bold text-gray-900" id="resultDailyCost">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monthly Cost:</span>
+                                <span class="font-bold text-accent" id="resultMonthlyCost">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Yearly Cost:</span>
+                                <span class="font-bold text-gray-900" id="resultYearlyCost">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Light Distance -->
+                    <div class="bg-purple-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-gray-700 mb-4">Hanging Height</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Optimal Distance:</span>
+                                <span class="font-bold text-gray-900" id="resultDistance">-</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Adjust Range:</span>
+                                <span class="font-bold text-gray-900" id="resultDistanceRange">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div id="productRecommendations" class="bg-gray-50 p-6 rounded-xl mb-6">
+                    <h4 class="font-semibold text-gray-700 mb-4">Recommended Grow Lights</h4>
+                    <div id="recommendedProducts" class="space-y-4">
+                        <!-- Products will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <h4 class="font-semibold text-gray-700 mb-3">Pro Tips</h4>
+                    <ul class="space-y-2 text-gray-600" id="resultTips">
+                        <!-- Tips will be inserted here by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="max-w-6xl mx-auto px-4 py-16" id="how-it-works">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">How Our Calculator Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-primary">1</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Enter Your Space</h3>
+                <p class="text-gray-600">Tell us your grow room dimensions and what you're growing.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-secondary">2</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Get DLI Targets</h3>
+                <p class="text-gray-600">We calculate optimal Daily Light Integral and PPFD for your plants.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-accent">3</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Find Your Light</h3>
+                <p class="text-gray-600">Get personalized recommendations with cost estimates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is DLI Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Understanding DLI (Daily Light Integral)</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-6">
+                    DLI (Daily Light Integral) measures the total amount of photosynthetically active radiation (PAR) that plants receive during a 24-hour period. It's expressed in moles of light per square meter per day (mol/m2/d).
+                </p>
+
+                <div class="bg-gray-50 p-6 rounded-xl mb-6">
+                    <h3 class="text-xl font-semibold mb-4">DLI Requirements by Plant Type</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="py-2">Plant Type</th>
+                                    <th class="py-2">Minimum DLI</th>
+                                    <th class="py-2">Optimal DLI</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b">
+                                    <td class="py-2">Leafy Greens</td>
+                                    <td class="py-2">12 mol/m2/d</td>
+                                    <td class="py-2">17-20 mol/m2/d</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">Fruiting Plants</td>
+                                    <td class="py-2">20 mol/m2/d</td>
+                                    <td class="py-2">30-40 mol/m2/d</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">Flowering (Cannabis)</td>
+                                    <td class="py-2">25 mol/m2/d</td>
+                                    <td class="py-2">40-65 mol/m2/d</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2">Seedlings</td>
+                                    <td class="py-2">6 mol/m2/d</td>
+                                    <td class="py-2">10-15 mol/m2/d</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">Houseplants</td>
+                                    <td class="py-2">4 mol/m2/d</td>
+                                    <td class="py-2">8-12 mol/m2/d</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-4">How to Calculate DLI</h3>
+                <p class="text-gray-600 mb-4">
+                    The formula for calculating DLI is:
+                </p>
+                <div class="bg-gray-100 p-4 rounded-lg mb-6 font-mono text-center">
+                    DLI = PPFD x (Hours of Light x 3600) / 1,000,000
+                </div>
+                <p class="text-gray-600">
+                    Where PPFD is measured in micromoles per square meter per second (umol/m2/s). Our calculator handles all these conversions automatically to give you accurate recommendations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="font-semibold text-gray-900 mb-2">How many watts per square foot do I need?</h3>
+                <p class="text-gray-600">For LED lights: 25-50 watts per square foot depending on plant type. Flowering plants need more (40-50W/sqft), while leafy greens need less (25-35W/sqft). HPS lights require more wattage due to lower efficiency.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="font-semibold text-gray-900 mb-2">How far should my grow light be from plants?</h3>
+                <p class="text-gray-600">This varies by light intensity. Generally: seedlings 24-36 inches, vegetative 18-24 inches, flowering 12-18 inches. Always check your specific light's recommendations and watch for light stress (bleaching, curling).</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="font-semibold text-gray-900 mb-2">LED vs HPS - which is better?</h3>
+                <p class="text-gray-600">LED is more energy-efficient (uses 40% less electricity for same output), produces less heat, and lasts longer (50,000+ hours vs 10,000). HPS has higher initial intensity but higher running costs. For most growers, LED is the better long-term investment.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="font-semibold text-gray-900 mb-2">What is PPFD and why does it matter?</h3>
+                <p class="text-gray-600">PPFD (Photosynthetic Photon Flux Density) measures light intensity in umol/m2/s. It tells you how much usable light reaches your plants. Higher PPFD = more photosynthesis = faster growth. Most flowering plants want 600-1000 PPFD.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Optimize Your Grow?</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Use our free calculator to find the perfect lighting setup for your indoor garden.
+            </p>
+            <a href="#calculator" class="inline-block bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+                Calculate Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">GrowLight Calc</h4>
+                    <p class="text-sm">Free tools to help indoor gardeners and hydroponic growers optimize their lighting for maximum yields.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#calculator" class="hover:text-white">Calculator</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+                        <li><a href="blog/" class="hover:text-white">Grow Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Disclaimer</h4>
+                    <p class="text-sm">This calculator provides estimates based on general horticultural guidelines. Actual requirements may vary based on specific conditions, genetics, and environmental factors.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 GrowLight Calc. All rights reserved.</p>
+                <p class="mt-2">Affiliate Disclosure: We may earn commissions from products recommended on this site.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>
