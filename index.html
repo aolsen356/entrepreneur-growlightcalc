@@ -30,6 +30,74 @@
         }
     </script>
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured Data - WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Grow Light Calculator",
+        "description": "Free grow light calculator for indoor plants. Calculate optimal DLI, coverage area, wattage requirements, and electricity costs for your grow room or hydroponic setup.",
+        "url": "https://growlightcalc.pages.dev/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "DLI (Daily Light Integral) calculation",
+            "PPFD recommendations by plant type",
+            "Coverage area calculation",
+            "Wattage requirements",
+            "Electricity cost estimates",
+            "Hanging height recommendations"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many watts per square foot do I need for grow lights?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For LED lights: 25-50 watts per square foot depending on plant type. Flowering plants need more (40-50W/sqft), while leafy greens need less (25-35W/sqft). HPS lights require more wattage due to lower efficiency."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How far should my grow light be from plants?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This varies by light intensity. Generally: seedlings 24-36 inches, vegetative 18-24 inches, flowering 12-18 inches. Always check your specific light's recommendations and watch for light stress."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "LED vs HPS - which grow light is better?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LED is more energy-efficient (uses 40% less electricity for same output), produces less heat, and lasts longer (50,000+ hours vs 10,000). HPS has higher initial intensity but higher running costs. For most growers, LED is the better long-term investment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is PPFD and why does it matter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PPFD (Photosynthetic Photon Flux Density) measures light intensity in umol/m2/s. It tells you how much usable light reaches your plants. Higher PPFD means more photosynthesis and faster growth. Most flowering plants want 600-1000 PPFD."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gradient-to-br from-green-50 to-white min-h-screen">
     <!-- Header -->
