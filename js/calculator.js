@@ -114,7 +114,7 @@ const productRecommendations = {
             coverage: "2x2 ft",
             price: "$70-90",
             rating: 4.6,
-            link: "https://www.amazon.com/dp/B07VL8FZS1?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B07VL8FZS1?tag=kcwd-20",
             features: ["Full spectrum", "Dimmable", "Low heat", "Daisy chain"]
         },
         {
@@ -123,7 +123,7 @@ const productRecommendations = {
             coverage: "2x2 ft seedlings",
             price: "$35-50",
             rating: 4.5,
-            link: "https://www.amazon.com/dp/B08DKGW2P1?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B08DKGW2P1?tag=kcwd-20",
             features: ["Samsung LM301", "Seedlings ideal", "Ultra quiet", "Energy efficient"]
         }
     ],
@@ -134,7 +134,7 @@ const productRecommendations = {
             coverage: "3x3 ft",
             price: "$100-130",
             rating: 4.7,
-            link: "https://www.amazon.com/dp/B07PLYR5HG?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B07PLYR5HG?tag=kcwd-20",
             features: ["Full spectrum", "Dimmable", "Sunlike light", "5-year warranty"]
         },
         {
@@ -143,7 +143,7 @@ const productRecommendations = {
             coverage: "3x3 ft veg / 2x2 ft flower",
             price: "$110-140",
             rating: 4.7,
-            link: "https://www.amazon.com/dp/B07TS82HWB?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B07TS82HWB?tag=kcwd-20",
             features: ["Samsung LM301B", "Mean Well driver", "High efficiency", "No fan noise"]
         },
         {
@@ -152,7 +152,7 @@ const productRecommendations = {
             coverage: "4x4 ft",
             price: "$280-320",
             rating: 4.8,
-            link: "https://www.amazon.com/dp/B0BW9VVQZQ?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B0BW9VVQZQ?tag=kcwd-20",
             features: ["Samsung LM301H", "2.9 umol/J", "Controller ready", "Commercial grade"]
         }
     ],
@@ -163,7 +163,7 @@ const productRecommendations = {
             coverage: "4x4 ft",
             price: "$350-400",
             rating: 4.8,
-            link: "https://www.amazon.com/dp/B097QYX2PH?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B097QYX2PH?tag=kcwd-20",
             features: ["Samsung LM301B", "2.8 umol/J", "Detachable driver", "Full spectrum"]
         },
         {
@@ -172,7 +172,7 @@ const productRecommendations = {
             coverage: "5x5 ft",
             price: "$650-750",
             rating: 4.9,
-            link: "https://www.amazon.com/dp/B09NNGLFBD?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B09NNGLFBD?tag=kcwd-20",
             features: ["Samsung LM301B EVO", "2.9 umol/J", "Commercial grade", "6-bar design"]
         },
         {
@@ -181,7 +181,7 @@ const productRecommendations = {
             coverage: "5x5 ft",
             price: "$900-1000",
             rating: 4.9,
-            link: "https://www.amazon.com/dp/B08D5T8VRT?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B08D5T8VRT?tag=kcwd-20",
             features: ["Samsung LM301H", "Deep red 660nm", "Made in USA", "Industry leading"]
         }
     ],
@@ -192,7 +192,7 @@ const productRecommendations = {
             coverage: "4x4 ft",
             price: "$110-140",
             rating: 4.5,
-            link: "https://www.amazon.com/dp/B0108I8LB2?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B0108I8LB2?tag=kcwd-20",
             features: ["Digital ballast", "Cool tube reflector", "Complete kit", "High output"]
         },
         {
@@ -201,7 +201,7 @@ const productRecommendations = {
             coverage: "5x5 ft",
             price: "$150-180",
             rating: 4.4,
-            link: "https://www.amazon.com/dp/B005HG8UQ2?tag=growlightcalc-20",
+            link: "https://www.amazon.com/dp/B005HG8UQ2?tag=kcwd-20",
             features: ["Dimmable ballast", "Wing reflector", "High intensity", "Budget friendly"]
         }
     ]
