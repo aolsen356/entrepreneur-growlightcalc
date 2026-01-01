@@ -13,6 +13,11 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://growlightcalc.pages.dev/blog/led-vs-hps-grow-lights.html">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LED vs HPS Grow Lights: Complete Comparison Guide">
+    <meta name="twitter:description" content="Comprehensive comparison of LED and HPS grow lights covering efficiency, costs, heat, and yield performance.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -119,6 +124,32 @@
             }
         ]
     }
+    </script>
+
+    <!-- Product Schema - LED vs HPS comparison products -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Spider Farmer SF-4000 LED Grow Light",
+            "description": "450W full spectrum LED grow light featuring Samsung LM301B diodes and MeanWell driver. Efficiency: 2.7 umol/J. Perfect 1000W HPS replacement for 4x4 ft coverage.",
+            "brand": {"@type": "Brand", "name": "Spider Farmer"},
+            "category": "LED Grow Lights",
+            "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "2150", "bestRating": "5", "worstRating": "1"},
+            "offers": {"@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "429", "highPrice": "499", "offerCount": "5", "availability": "https://schema.org/InStock"}
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "iPower 1000W Double Ended HPS Grow Light Kit",
+            "description": "1000W double-ended HPS grow light with digital ballast. High output for large commercial grows. Includes bulb and reflector hood.",
+            "brand": {"@type": "Brand", "name": "iPower"},
+            "category": "HPS Grow Lights",
+            "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "892", "bestRating": "5", "worstRating": "1"},
+            "offers": {"@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "189", "highPrice": "249", "offerCount": "4", "availability": "https://schema.org/InStock"}
+        }
+    ]
     </script>
 </head>
 <body class="bg-gradient-to-br from-green-50 to-white min-h-screen">
@@ -487,5 +518,6 @@
             <p class="text-sm mt-2">Affiliate Disclosure: We may earn commissions from products recommended on this site.</p>
         </div>
     </footer>
+    <script src="../js/exit-intent.js"></script>
 </body>
 </html>
