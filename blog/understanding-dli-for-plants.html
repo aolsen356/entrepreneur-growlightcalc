@@ -25,6 +25,73 @@
             }
         }
     </script>
+
+    <!-- Structured Data - Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Understanding DLI: Daily Light Integral Guide for Indoor Plants",
+        "description": "Complete guide to DLI (Daily Light Integral) for indoor growing. Learn optimal DLI targets for vegetables, cannabis, herbs, and houseplants with calculation examples.",
+        "author": {
+            "@type": "Organization",
+            "name": "GrowLight Calc"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GrowLight Calc",
+            "url": "https://growlightcalc.pages.dev"
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://growlightcalc.pages.dev/blog/understanding-dli-for-plants.html"
+        }
+    }
+    </script>
+
+    <!-- Structured Data - FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is DLI and why does it matter for plants?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DLI (Daily Light Integral) measures the total amount of photosynthetically active light a plant receives in a 24-hour period, expressed in mol/m²/day. Unlike PPFD which measures instantaneous light intensity, DLI accounts for both intensity AND duration. It matters because plants need a specific amount of total light energy to photosynthesize effectively - too little causes stretching and poor yields, too much can cause light stress."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate DLI from PPFD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To calculate DLI from PPFD, use this formula: DLI = PPFD × (3600 × photoperiod) ÷ 1,000,000. For example, if your light produces 500 PPFD and runs for 12 hours: DLI = 500 × (3600 × 12) ÷ 1,000,000 = 21.6 mol/m²/day. Our calculator does this math automatically when you enter your light specifications."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What DLI do tomatoes need?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tomatoes need a DLI of 20-30 mol/m²/day for optimal growth and fruit production. At minimum, they need 15 mol/m²/day to produce fruit. For best results, aim for 25 mol/m²/day during flowering and fruiting. This can be achieved with 600-800 PPFD for 12-14 hours or higher intensity for shorter periods."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the ideal DLI for cannabis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cannabis DLI requirements vary by growth stage. Seedlings need 15-20 mol/m²/day, vegetative plants thrive at 35-45 mol/m²/day, and flowering plants can utilize 40-65 mol/m²/day with some strains tolerating up to 70 mol/m²/day with CO2 supplementation. Start lower and increase gradually to find your plants' sweet spot without causing light stress."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gradient-to-br from-green-50 to-white min-h-screen">
     <!-- Header -->
