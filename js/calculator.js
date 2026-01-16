@@ -309,7 +309,7 @@ function generateRecommendations(area, wattage, lightType) {
                 <div class="flex flex-wrap gap-2 mb-3">
                     ${product.features.map(f => `<span class="text-xs bg-gray-100 px-2 py-1 rounded">${f}</span>`).join('')}
                 </div>
-                <a href="${product.link}" target="_blank" rel="noopener sponsored"
+                <a href="${product.link}" target="_blank" rel="noopener noreferrer sponsored"
                    class="inline-block bg-primary text-white px-4 py-2 rounded text-sm hover:bg-green-700 transition">
                     Check Price on Amazon
                 </a>
